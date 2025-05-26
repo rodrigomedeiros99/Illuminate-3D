@@ -4,15 +4,24 @@ import RelatedProducts from '@/components/related-products';
 import { notFound } from 'next/navigation';
 import { allProducts } from '@/data/products';
 
-export async function generateStaticParams() {
+// ✅ Define the correct props interface
+interface ProductPageProps {
+  params: {
+    id: string;
+  };
+}
+
+// ✅ Correct return type for generateStaticParams
+export async function generateStaticParams(): Promise<ProductPageProps['params'][]> {
   return allProducts.map((product) => ({
-    id: product.id
+    id: product.id,
   }));
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = allProducts.find(p => p.id === params.id);
-  
+// ✅ Use the typed props
+export default function ProductPage({ params }: ProductPageProps) {
+  const product = allProducts.find((p) => p.id === params.id);
+
   if (!product) {
     notFound();
   }
@@ -21,9 +30,9 @@ export default function ProductPage({ params }: { params: { id: string } }) {
     <Layout>
       <div className="pt-24 pb-16 bg-zinc-900">
         <ProductDetail product={product} />
-        <RelatedProducts 
-          currentProductId={product.id} 
-          category={product.category} 
+        <RelatedProducts
+          currentProductId={product.id}
+          category={product.category}
         />
       </div>
     </Layout>
