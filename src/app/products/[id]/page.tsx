@@ -4,22 +4,19 @@ import RelatedProducts from '@/components/related-products';
 import { notFound } from 'next/navigation';
 import { allProducts } from '@/data/products';
 
-// ✅ Define the correct props interface
-interface ProductPageProps {
-  params: {
-    id: string;
-  };
-}
-
-// ✅ Correct return type for generateStaticParams
-export async function generateStaticParams(): Promise<ProductPageProps['params'][]> {
+// ✅ This works perfectly in Next.js 15
+export async function generateStaticParams() {
   return allProducts.map((product) => ({
     id: product.id,
   }));
 }
 
-// ✅ Use the typed props
-export default function ProductPage({ params }: ProductPageProps) {
+// ✅ Don't use custom PageProps, just inline the type
+export default function ProductPage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const product = allProducts.find((p) => p.id === params.id);
 
   if (!product) {
