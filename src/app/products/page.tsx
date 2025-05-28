@@ -7,7 +7,8 @@ import { Skeleton } from '@/components/ui/skeleton';
 export default async function ProductsPage({
   searchParams,
 }: {
-  searchParams: { category?: string; sort?: string };
+  // Updated type definition to indicate searchParams is a Promise
+  searchParams: Promise<{ category?: string; sort?: string }>;
 }) {
   // ✅ Await searchParams before accessing its properties
   const params = await searchParams;
