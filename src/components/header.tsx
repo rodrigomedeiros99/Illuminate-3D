@@ -65,8 +65,8 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
-            <Printer className="h-8 w-8 text-white" />
-            <span className="text-xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Illuminate 3D</span>
+          {/*  <Printer className="h-8 w-8 text-white" /> */}
+            <span className="text-2xl sm:text-2xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Illuminate 3D</span>
           </Link>
           
           <div className="hidden lg:flex items-center space-x-8">
@@ -98,7 +98,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-4">
             <Link
               href="/products"
-              className="bg-purple-700 hover:bg-purple-600/70 text-gray-100 px-4 py-2 rounded-full font-medium transition-colors"
+              className="bg-purple-700 hover:bg-purple-600/70 text-gray-100 px-4 py-2 rounded-2xl font-medium transition-colors"
             >
               Order Now
             </Link>
@@ -192,7 +192,7 @@ export default function Header() {
             ))}
             <Link
               href="/products"
-              className="block w-full bg-purple-600 hover:bg-purple-600/90 text-gray-100 px-4 py-3 rounded-md font-medium transition-colors text-center mt-4"
+              className="block w-full bg-purple-600 hover:bg-purple-600/90 text-gray-100 px-4 py-3 rounded-2xl font-medium transition-colors text-center mt-4"
               onClick={() => {
                 setIsMenuOpen(false);
                 document.body.style.overflow = 'auto';

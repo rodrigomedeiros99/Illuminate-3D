@@ -4,20 +4,18 @@ import RelatedProducts from '@/components/related-products';
 import { notFound } from 'next/navigation';
 import { allProducts } from '@/data/products';
 
-// ✅ This works perfectly in Next.js 15
-export async function generateStaticParams() {
-  return allProducts.map((product) => ({
-    id: product.id,
-  }));
-}
-
-// ✅ Don't use custom PageProps, just inline the type
-export default function ProductPage({
+// ✅ Must be async
+export default async function ProductPage({
   params,
 }: {
   params: { id: string };
 }) {
-  const product = allProducts.find((p) => p.id === params.id);
+  // ✅ Await params before accessing its properties
+  const resolvedParams = await params;
+  const id = resolvedParams.id;
+
+  // ✅ Simulate async fetching (you can fetch from DB/API here)
+  const product = allProducts.find((p) => p.id === id);
 
   if (!product) {
     notFound();

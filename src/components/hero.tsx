@@ -37,7 +37,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="max-w-2xl mx-auto"
           >
-            <p className="text-lg md:text-xl text-gray-400 mb-6">
+            <p className="text-md md:text-xl text-gray-400 mb-6">
               Transform your ideas into reality with our premium 3D printing services.
                From concept to creation, we bring your vision to life.
             </p>
@@ -45,7 +45,7 @@ export default function Hero() {
             <div className="flex flex-wrap justify-center gap-6 mt-8">
               <Link 
                 href="/products"
-                className="bg-violet-600 hover:bg-violet-700 text-white px-8 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 group"
+                className="bg-violet-600 relative hover:bg-violet-700 text-white px-8 py-3 rounded-2xl font-medium transition-all duration-300 flex items-center gap-2 group"
               >
                 Explore Products
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
@@ -53,7 +53,7 @@ export default function Hero() {
               
               <Link 
                 href="#contact"
-                className="border-2 border-white/20 hover:border-white/40 text-white px-8 py-3 rounded-full font-medium transition-all duration-300"
+                className="border-2 border-white/20 hover:border-white/40 text-white px-8 hover:bg-gray-700 py-3 rounded-2xl font-medium transition-all duration-300 cursor-pointer"
               >
                 Contact Us
               </Link>
