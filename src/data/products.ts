@@ -9,8 +9,8 @@ export const allProducts: Product[] = [
     discount: 0,
     category: 'lamps',
     images: [
-      'https://images.unsplash.com/photo-1747228983998-de9cfbc2ab96?q=80&w=2067&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'https://images.unsplash.com/photo-1747228984020-1fad3a2c1e63?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
+      '/dragon-1.png',
+      '/dragon-2.png'
     ],
     isNew: true,
     inStock: true
