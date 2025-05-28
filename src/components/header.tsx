@@ -66,7 +66,7 @@ export default function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center space-x-2">
           {/*  <Printer className="h-8 w-8 text-white" /> */}
-            <span className="text-2xl sm:text-2xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Illuminate 3D</span>
+            <span className="text-3xl sm:text-3xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Illuminate 3D</span>
           </Link>
           
           <div className="hidden lg:flex items-center space-x-8">

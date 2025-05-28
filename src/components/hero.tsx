@@ -17,7 +17,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-black/70"></div>
       </div>
 
-      <div className="relative text-center px-4">
+      <div className="relative  text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -42,21 +42,23 @@ export default function Hero() {
                From concept to creation, we bring your vision to life.
             </p>
 
-            <div className="flex flex-wrap justify-center gap-6 mt-8">
+            <div className="flex relative container flex-wrap justify-center gap-6 mt-8">
               <Link 
                 href="/products"
-                className="bg-violet-600 relative hover:bg-violet-700 text-white px-8 py-3 rounded-2xl font-medium transition-all duration-300 flex items-center gap-2 group"
+                className="bg-violet-600  cursor-pointer relative hover:bg-violet-700 text-white px-8 py-3 rounded-2xl font-medium transition-all duration-300 flex items-center gap-2 group"
               >
-                Explore Products
+                <span>Explore Products </span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              
-              <Link 
+              <button className=' border-2 border-white/20 hover:border-white/40 text-white px-8 hover:bg-gray-700 py-3 rounded-2xl font-medium transition-all duration-300 cursor-pointer'>
+                <Link 
                 href="#contact"
-                className="border-2 border-white/20 hover:border-white/40 text-white px-8 hover:bg-gray-700 py-3 rounded-2xl font-medium transition-all duration-300 cursor-pointer"
+                className=""
               >
-                Contact Us
               </Link>
+              <span> Contact Us</span>
+              </button>
+             
             </div>
           </motion.div>
           <div className="flex justify-center align-bottom pt-44  animate-bounce">

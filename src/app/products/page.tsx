@@ -17,7 +17,7 @@ export default async function ProductsPage({
 
   return (
     <Layout>
-      <div className="bg-zinc-900 py-8">
+      <div className="bg-zinc-950 py-8">
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2 md:gap-8 mb-8 pt-20">
             <h1 className="text-3xl font-bold text-gray-100">All Products</h1>
