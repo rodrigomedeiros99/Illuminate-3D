@@ -4,11 +4,11 @@ import RelatedProducts from '@/components/related-products';
 import { notFound } from 'next/navigation';
 import { allProducts } from '@/data/products';
 
-// ✅ Must be async
+// Update the type definition to indicate params is a Promise
 export default async function ProductPage({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
   // ✅ Await params before accessing its properties
   const resolvedParams = await params;
