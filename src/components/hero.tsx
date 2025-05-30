@@ -50,14 +50,13 @@ export default function Hero() {
                 <span>Explore Products </span>
                 <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <button className=' border-2 border-white/20 hover:border-white/40 text-white px-8 hover:bg-gray-700 py-3 rounded-2xl font-medium transition-all duration-300 cursor-pointer'>
-                <Link 
-                href="#contact"
-                className=""
-              >
-              </Link>
-              <span> Contact Us</span>
-              </button>
+              <Link 
+  href="#contact"
+  className="border-2 border-white/20 hover:border-white/40 text-white px-8 hover:bg-gray-700 py-3 rounded-2xl font-medium transition-all duration-300 cursor-pointer"
+>
+  Contact Us
+</Link>
+
              
             </div>
           </motion.div>
