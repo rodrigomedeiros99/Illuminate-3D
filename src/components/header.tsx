@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ShoppingCart, Menu, X, Printer } from 'lucide-react';
+import { ShoppingCart, Menu, X } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { useCart } from '@/contexts/cart-context';
 
@@ -58,12 +58,12 @@ export default function Header() {
 
   return (
     <header 
-      className={`fixed w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 w-full z-50 transition-all duration-300 bg-gray-900/50 rounded-3xl max-w-[99rem] 2xl:left-40 mt-1 ${
         isScrolled ? 'bg-gray-900/70 backdrop-blur-md ' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-14">
           <Link href="/" className="flex items-center space-x-2">
           {/*  <Printer className="h-8 w-8 text-white" /> */}
             <span className="text-3xl sm:text-3xl bg-gradient-to-r from-pink-500 to-violet-500 bg-clip-text font-extrabold text-transparent">Illuminate 3D</span>
